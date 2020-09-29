@@ -1,5 +1,5 @@
 # Primeira etapa:
-###Trata-se de um sistema de controle das atividades escolares. Os detalhes de implementação serão descritos a seguir. 
+### Trata-se de um sistema de controle das atividades escolares. Os detalhes de implementação serão descritos a seguir. 
 
 1.	Crie as seguintes classes: Aluno, ProfessorEfetivo e ProfessorSubstituto. 
 
