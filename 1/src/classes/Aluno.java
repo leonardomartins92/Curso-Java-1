@@ -1,3 +1,5 @@
+package classes;
+
 public class Aluno {
     String nome;
     String telefone;

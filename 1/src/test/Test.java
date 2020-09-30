@@ -1,3 +1,8 @@
+package test;
+import classes.Aluno;
+import classes.ProfessorSubstituto;
+import classes.ProfessorEfetivo;
+
 public class Test {
     public static void main(String[] args) {
         Aluno aluno1=new Aluno("Leo","9998-1212","email@contato");
