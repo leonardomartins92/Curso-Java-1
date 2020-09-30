@@ -5,5 +5,8 @@ public class Test {
         ProfessorEfetivo prof1=new ProfessorEfetivo("Pedro","123-123","prof@gmail",
                 "Informatica",4000.0,"01/10/1990");
         System.out.println(prof1.consulta(prof1));
+        ProfessorSubstituto prof2 = new ProfessorSubstituto("Antonio","3221-1232","prof@hotmail",
+                "Ciencias", 20);
+        System.out.println(prof2.consulta(prof2));
     }
 }

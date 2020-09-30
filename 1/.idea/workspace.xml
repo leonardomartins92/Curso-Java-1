@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77e51ef4-dcfe-43e9-82df-476c499ab0d7" name="Default Changelist" comment="" />
+    <list default="true" id="77e51ef4-dcfe-43e9-82df-476c499ab0d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Trabalho LPI/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho LPI/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Trabalho LPI/ProfessorEfetivo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho LPI/ProfessorEfetivo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Trabalho LPI/ProfessorSubstituto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho LPI/ProfessorSubstituto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Trabalho LPI/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho LPI/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfessorEfetivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfessorEfetivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfessorSubstituto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProfessorSubstituto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +28,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1iC6jCDZAJuC6WWnV0ALtC4S0kd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,7 +36,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/bsi/1 Periodo/Eng Soft/Webtask" />
   </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -71,21 +82,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1601400426945" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1601405712585">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1601494513253">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601405712585" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1601405712585">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601494513253" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1601419730705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601405712585" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1601405712585">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601419730705" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1601419730705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601405712585" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1601405712585">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601419730705" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1601419730705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601405712585" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601419730705" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1601419730705">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601419730705" />
   </component>
 </project>

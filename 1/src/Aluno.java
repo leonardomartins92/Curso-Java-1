@@ -10,7 +10,7 @@ public class Aluno {
     }
 
     public String consulta(Aluno aluno){
-        return ("Aluno: "+aluno.nome+" - Telefone:"+aluno.telefone+"\n("+aluno.email+")" );
+        return ("Aluno: "+aluno.nome+" - Telefone:"+aluno.telefone+"\n("+aluno.email+")\n" );
     }
 
 

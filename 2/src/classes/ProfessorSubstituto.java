@@ -1,3 +1,5 @@
+package classes;
+
 public class ProfessorSubstituto {
     String nome;
     String telefone;

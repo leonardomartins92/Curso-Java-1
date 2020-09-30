@@ -1,3 +1,5 @@
+package classes;
+
 public class ProfessorEfetivo {
    String nome;
    String telefone;
