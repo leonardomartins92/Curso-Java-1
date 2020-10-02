@@ -8,12 +8,15 @@ public class ProfessorEfetivo {
    Regime regime;
    String dataContrataçao;
 
+
+
     public ProfessorEfetivo(String nome, String telefone, String email, String departamento, Regime regime, String dataContrataçao) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.departamento = departamento;
         this.dataContrataçao = dataContrataçao;
+        this.regime=regime;
     }
 
     public String consulta(){
@@ -21,7 +24,7 @@ public class ProfessorEfetivo {
                 " - Telefone:"+this.telefone+
                 "\n("+this.email+")\n"+
                 this.departamento+" - "+regime.descrição+
-                "\nSalário:"+this.regime.salario+
+                "\nSalário:"+regime.salario+
                 "\nContratado em:"+this.dataContrataçao+"\n");
     }
 
