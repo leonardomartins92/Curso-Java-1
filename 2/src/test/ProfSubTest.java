@@ -11,9 +11,9 @@ public class ProfSubTest {
         ProfessorSubstituto prof3 = new ProfessorSubstituto("Eduarda","971227321","duarda@hot","Fisica",
                 40);
 
-        System.out.println(prof1.consulta(prof1));
-        System.out.println(prof1.consulta(prof2));
-        System.out.println(prof1.consulta(prof3));
+        System.out.println(prof1.consulta());
+        System.out.println(prof1.consulta());
+        System.out.println(prof1.consulta());
 
 
     }

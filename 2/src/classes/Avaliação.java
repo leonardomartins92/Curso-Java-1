@@ -18,6 +18,7 @@ public class Avaliação {
         return "Avaliação{" +
                 "descrição='" + descrição + '\'' +
                 ", valor=" + valor +
+                ", identificador='" + identificador + '\'' +
                 '}';
     }
 }

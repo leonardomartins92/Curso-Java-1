@@ -6,6 +6,7 @@ public class ProfessorSubstituto {
     String email;
     String departamento;
     int horasAula;
+    static double valorAula;
 
     public ProfessorSubstituto(String nome, String telefone, String email, String departamento, int horasAula) {
         this.nome = nome;
@@ -15,11 +16,11 @@ public class ProfessorSubstituto {
         this.horasAula = horasAula;
     }
 
-    public String consulta(ProfessorSubstituto professor){
-        return ("Professor: "+professor.nome+
-                " - Telefone:"+professor.telefone+
-                "\n("+professor.email+")\n"+
-                professor.departamento+" - "+professor.horasAula+" aulas mensais\n");
+    public String consulta(){
+        return ("Professor: "+this.nome+
+                " - Telefone:"+this.telefone+
+                "\n("+this.email+")\n"+
+                this.departamento+" - "+this.horasAula+" aulas mensais\n");
 
     }
 }

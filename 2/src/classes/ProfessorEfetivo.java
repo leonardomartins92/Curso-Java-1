@@ -5,25 +5,24 @@ public class ProfessorEfetivo {
    String telefone;
    String email;
    String departamento;
-   Double salario;
+   Regime regime;
    String dataContrataçao;
 
-    public ProfessorEfetivo(String nome, String telefone, String email, String departamento, Double salario, String dataContrataçao) {
+    public ProfessorEfetivo(String nome, String telefone, String email, String departamento, Regime regime, String dataContrataçao) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.departamento = departamento;
-        this.salario = salario;
         this.dataContrataçao = dataContrataçao;
     }
 
-    public String consulta(ProfessorEfetivo professor){
-        return ("Professor: "+professor.nome+
-                " - Telefone:"+professor.telefone+
-                "\n("+professor.email+")\n"+
-                professor.departamento+" - Dedicação Exclusiva\n"+
-                "Salário:"+professor.salario+
-                "\nContratado em:"+professor.dataContrataçao+"\n");
+    public String consulta(){
+        return ("Professor: "+this.nome+
+                " - Telefone:"+this.telefone+
+                "\n("+this.email+")\n"+
+                this.departamento+" - "+regime.descrição+
+                "\nSalário:"+this.regime.salario+
+                "\nContratado em:"+this.dataContrataçao+"\n");
     }
 
 }

@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Aluno {
-    String nome;
+    public String nome;
     String telefone;
     String email;
     String matricula;
-    ArrayList<Disciplina> historico = new ArrayList<Disciplina>();
+    public ArrayList<Disciplina> historicoDisciplina = new ArrayList();
+    double ira;
     static int id=1;
     public static int ano;
     static int mudouAno; //valor que salva ano da ultima matricula realizada para verificação
@@ -27,8 +28,17 @@ public class Aluno {
         mudouAno=ano;
     }
 
-    public String consulta(Aluno aluno){
-        return ("Aluno: "+aluno.nome+" - Telefone:"+aluno.telefone+"\n("+aluno.email+")\n"+aluno.matricula );
+    public String consulta(){
+        return ("Aluno: "+this.nome+" - Telefone:"+this.telefone+"\n("+this.email+")\n"+this.matricula );
+    }
+
+    public double calculaIra(){
+       ira=0;
+        for (Disciplina disciplina:historicoDisciplina) {
+            ira+=disciplina.media;
+        }
+        ira /=historicoDisciplina.size();
+        return ira;
     }
 
 
