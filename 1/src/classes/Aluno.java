@@ -11,8 +11,8 @@ public class Aluno {
         this.email = email;
     }
 
-    public String consulta(Aluno aluno){
-        return ("Aluno: "+aluno.nome+" - Telefone:"+aluno.telefone+"\n("+aluno.email+")\n" );
+    public String consulta(){
+        return ("Aluno: "+this.nome+" - Telefone:"+this.telefone+"\n("+this.email+")\n" );
     }
 
 

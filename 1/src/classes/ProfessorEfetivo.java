@@ -17,13 +17,13 @@ public class ProfessorEfetivo {
         this.dataContrataçao = dataContrataçao;
     }
 
-    public String consulta(ProfessorEfetivo professor){
-        return ("Professor: "+professor.nome+
-                " - Telefone:"+professor.telefone+
-                "\n("+professor.email+")\n"+
-                professor.departamento+" - Dedicação Exclusiva\n"+
-                "Salário:"+professor.salario+
-                "\nContratado em:"+professor.dataContrataçao+"\n");
+    public String consulta(){
+        return ("Professor: "+this.nome+
+                " - Telefone:"+this.telefone+
+                "\n("+this.email+")\n"+
+                this.departamento+" - Dedicação Exclusiva\n"+
+                "Salário:"+this.salario+
+                "\nContratado em:"+this.dataContrataçao+"\n");
     }
 
 }
