@@ -26,31 +26,8 @@ public class ProfessorSubstituto {
 
     }
 
-    public String getNome() {
-        return nome;
-    }
+   public static void setValorAula(double valorAula) {
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getDepartamento() {
-        return departamento;
-    }
-
-    public int getHorasAula() {
-        return horasAula;
-    }
-
-    public static double getValorAula() {
-        return valorAula;
-    }
-
-    public static void setValorAula(double valorAula) {
         ProfessorSubstituto.valorAula = valorAula;
     }
 }
