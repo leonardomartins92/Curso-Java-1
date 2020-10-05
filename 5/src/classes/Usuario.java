@@ -5,21 +5,12 @@ public class Usuario  {
     protected String telefone;
     protected String email;
     protected String sexo;
-    protected String departamento;
 
-    protected Usuario(String nome, String telefone, String email, String sexo) {
+    public Usuario(String nome, String telefone, String email, String sexo) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.sexo = sexo.toLowerCase();
-    }
-
-    protected Usuario(String nome, String telefone, String email, String sexo, String departamento) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
-        this.sexo = sexo.toLowerCase();
-        this.departamento=departamento;
     }
 
     protected String descreve (){
