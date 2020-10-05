@@ -16,8 +16,8 @@ public class ProfEfetTest {
                 "Eletrica", regime2,"11/01/2000");
 
         //Consulta
-        System.out.println(prof1.consulta());
-        System.out.println(prof2.consulta());
+        System.out.println(prof1.descreve());
+        System.out.println(prof2.descreve());
 
     }
 }

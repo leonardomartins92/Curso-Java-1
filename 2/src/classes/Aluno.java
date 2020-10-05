@@ -28,7 +28,7 @@ public class Aluno {
         mudouAno=ano;
     }
 
-    public String consulta(){
+    public String descreve(){
         return ("Aluno: "+this.nome+" - Telefone:"+this.telefone+"\n("+this.email+")\n"+this.matricula );
     }
 

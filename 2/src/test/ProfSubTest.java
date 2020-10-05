@@ -17,9 +17,9 @@ public class ProfSubTest {
         ProfessorSubstituto.valorAula= 50.0;
 
         //Consulta
-        System.out.println(prof1.consulta());
-        System.out.println(prof2.consulta());
-        System.out.println(prof3.consulta());
+        System.out.println(prof1.descreve());
+        System.out.println(prof2.descreve());
+        System.out.println(prof3.descreve());
 
 
     }

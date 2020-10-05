@@ -11,8 +11,11 @@ public class Aluno {
         this.email = email;
     }
 
-    public String consulta(){
-        return ("Aluno: "+this.nome+" - Telefone:"+this.telefone+"\n("+this.email+")\n" );
+    public String descreve(){
+
+        return ("Aluno: "+this.nome+
+                " - Telefone:"+this.telefone+
+                "\n("+this.email+")\n" );
     }
 
 

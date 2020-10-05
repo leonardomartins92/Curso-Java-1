@@ -15,7 +15,7 @@ public class ProfessorSubstituto {
         this.horasAula = horasAula;
     }
 
-    public String consulta(){
+    public String descreve(){
         return ("Professor: "+this.nome+
                 " - Telefone:"+this.telefone+
                 "\n("+this.email+")\n"+

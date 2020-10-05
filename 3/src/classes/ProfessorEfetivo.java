@@ -5,7 +5,7 @@ public class ProfessorEfetivo {
     private String telefone;
     private String email;
     private String departamento;
-    Regime regime;
+    private Regime regime;
     private String dataContrataçao;
 
     public ProfessorEfetivo(String nome, String telefone, String email, String departamento, Regime regime, String dataContrataçao) {
@@ -17,7 +17,7 @@ public class ProfessorEfetivo {
         this.regime=regime;
     }
 
-    public String consulta(){
+    public String descreve(){
         return ("Professor: "+this.nome+
                 " - Telefone:"+this.telefone+
                 "\n("+this.email+")\n"+

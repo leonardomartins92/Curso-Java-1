@@ -62,13 +62,13 @@ public class AlunoTest {
         System.out.println("\n");
 
         //Criação dos alunos, com mudança de ano, manual, para verificar o incremento do codigo Ano-X
-        Aluno.setAno(2020);
-        Aluno aluno1 = new Aluno("Leo", "9991212", "leo@gmail");
-        Aluno aluno2 = new Aluno("Pedro", "3223451", "kik@hot");
-        Aluno aluno3 = new Aluno("Pam","3232212", "joi@gmia");
-        Aluno.setAno(2021);
-        Aluno aluno4 = new Aluno("Mateus","32232212", "qqr@gmia");
-        Aluno aluno5 = new Aluno("Fabricio","999212", "algum@gmia");
+       // Aluno.setAno(2020);
+        Aluno aluno1 = new Aluno("Leo", "9991212", "leo@gmail","Masculino");
+        Aluno aluno2 = new Aluno("Pedro", "3223451", "kik@hot","Masculino");
+        Aluno aluno3 = new Aluno("Pam","3232212", "joi@gmia","Feminino");
+       // Aluno.setAno(2021);
+        Aluno aluno4 = new Aluno("Mateus","32232212", "qqr@gmia","Masculino");
+        Aluno aluno5 = new Aluno("Fabricio","999212", "algum@gmia","Masculino");
 
         //Teste do incremento do codigo Ano-X
         System.out.println(aluno1.descreve());
@@ -91,8 +91,8 @@ public class AlunoTest {
         System.out.println("\n");
 
         //Verifica se disciplina esta na lista
-        System.out.println(aluno1.consultaDisciplinas(disciplina1));
-        System.out.println(aluno1.consultaDisciplinas(disciplina3));
+        System.out.println(aluno1.consultaDisciplina(disciplina1));
+        System.out.println(aluno1.consultaDisciplina(disciplina3));
         System.out.println("\n");
 
         //Metodo lista todas as avaliaçoes na lista de disciplinas
@@ -105,6 +105,11 @@ public class AlunoTest {
 
         //Teste do calculo do IRA
         System.out.println("O IRA do aluno é:"+aluno1.calculaIra());
+
+        //Teste do tratamento
+        System.out.println(aluno1.tratamento());
+        System.out.println(aluno3.tratamento());
+
 
     }
 }

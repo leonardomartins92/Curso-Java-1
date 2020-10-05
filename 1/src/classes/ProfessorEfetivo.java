@@ -17,7 +17,7 @@ public class ProfessorEfetivo {
         this.dataContrataçao = dataContrataçao;
     }
 
-    public String consulta(){
+    public String descreve(){
         return ("Professor: "+this.nome+
                 " - Telefone:"+this.telefone+
                 "\n("+this.email+")\n"+

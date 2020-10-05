@@ -64,11 +64,11 @@ public class AlunoTest {
         Aluno aluno5 = new Aluno("Fabricio","999212", "algum@gmia");
 
         //Teste do incremento do codigo Ano-X
-        System.out.println(aluno1.consulta());
-        System.out.println(aluno2.consulta());
-        System.out.println(aluno3.consulta());
-        System.out.println(aluno4.consulta());
-        System.out.println(aluno5.consulta());
+        System.out.println(aluno1.descreve());
+        System.out.println(aluno2.descreve());
+        System.out.println(aluno3.descreve());
+        System.out.println(aluno4.descreve());
+        System.out.println(aluno5.descreve());
         System.out.println("\n");
 
         //Teste do calculo do IRA

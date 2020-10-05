@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77e51ef4-dcfe-43e9-82df-476c499ab0d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4/src/classes/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/ProfessorEfetivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ProfessorEfetivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/classes/ProfessorSubstituto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ProfessorSubstituto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/classes/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/classes/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/classes/ProfessorEfetivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/classes/ProfessorEfetivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/classes/ProfessorSubstituto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/classes/ProfessorSubstituto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/test/AlunoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/test/AlunoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/test/ProfEfetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/test/ProfEfetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2/src/test/ProfSubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2/src/test/ProfSubTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/out/production/Trabalho LPI/classes/ProfessorEfetivo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3/out/production/Trabalho LPI/classes/ProfessorEfetivo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/out/production/Trabalho LPI/classes/ProfessorSubstituto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../3/out/production/Trabalho LPI/classes/ProfessorSubstituto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/src/classes/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3/src/classes/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/src/classes/ProfessorEfetivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3/src/classes/ProfessorEfetivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/src/classes/ProfessorSubstituto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3/src/classes/ProfessorSubstituto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/src/test/AlunoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3/src/test/AlunoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/src/test/ProfEfetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3/src/test/ProfEfetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../3/src/test/ProfSubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../3/src/test/ProfSubTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +46,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

@@ -19,7 +19,7 @@ public class ProfessorEfetivo {
         this.regime=regime;
     }
 
-    public String consulta(){
+    public String descreve(){
         return ("Professor: "+this.nome+
                 " - Telefone:"+this.telefone+
                 "\n("+this.email+")\n"+
