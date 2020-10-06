@@ -12,10 +12,10 @@ public class Aluno extends Usuario {
    private static int ano;
    private static int mudouAno; //valor que salva ano da ultima matricula realizada para verificação
 
-    public Aluno(String nome, String telefone, String email, String sexo) {
+    public Aluno(String nome, String telefone, String email, SexoUsuario sexo) {
         super(nome,telefone,email,sexo);
         // Linha abaixo foi removida apenas para testes de mudança de ano de forma manual
-        ano=Calendar.getInstance().get(Calendar.YEAR);
+        // ano=Calendar.getInstance().get(Calendar.YEAR);
         this.historicoDisciplina=new ArrayList<>();
         if (ano != mudouAno){
             id=1;
@@ -47,14 +47,12 @@ public class Aluno extends Usuario {
 
     }
 
-    public boolean adicionaDisciplina(Disciplina disciplina){
+    public void adicionaDisciplina(Disciplina disciplina){
         getHistoricoDisciplina().add(disciplina);
-        return true;
     }
 
-    public boolean removeDisciplina(Disciplina disciplina){
+    public void removeDisciplina(Disciplina disciplina){
         historicoDisciplina.remove(disciplina);
-        return true;
     }
 
     public String listaDisciplinas(){

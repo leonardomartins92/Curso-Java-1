@@ -1,16 +1,17 @@
 package test;
 
 import classes.ProfessorSubstituto;
+import classes.SexoUsuario;
 
 public class ProfSubTest {
     public static void main(String[] args) {
 
         //Criação de professores
-        ProfessorSubstituto prof1 = new ProfessorSubstituto("Pedro","98127321","droo@hot","Masculino","Matematica",
+        ProfessorSubstituto prof1 = new ProfessorSubstituto("Pedro","98127321","droo@hot", SexoUsuario.MASCULINO,"Matematica",
                 20);
-        ProfessorSubstituto prof2 = new ProfessorSubstituto("Filomena","12327321","filo@hot","Feminino","Geografia",
+        ProfessorSubstituto prof2 = new ProfessorSubstituto("Filomena","12327321","filo@hot",SexoUsuario.FEMININO,"Geografia",
                 10);
-        ProfessorSubstituto prof3 = new ProfessorSubstituto("Eduarda","971227321","duarda@hot","feminino","Fisica",
+        ProfessorSubstituto prof3 = new ProfessorSubstituto("Eduarda","971227321","duarda@hot",SexoUsuario.FEMININO,"Fisica",
                 40);
 
         //Declaração do valor hora/aula

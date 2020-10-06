@@ -5,21 +5,19 @@ public class ProfessorSubstituto extends Usuario {
     private int horasAula;
     private static double valorAula;
 
-    public ProfessorSubstituto(String nome, String telefone, String email, String sexo, String departamento, int horasAula) {
+    public ProfessorSubstituto(String nome, String telefone, String email, SexoUsuario sexo, String departamento, int horasAula) {
         super(nome,telefone,email,sexo);
-        this.departamento = departamento;
+        this.departamento=departamento;
         this.horasAula = horasAula;
     }
 
     public String descreve(){
-        return ("Professor: "+super.descreve()+
-                this.departamento+" - "+this.horasAula+" aulas mensais\nValor hora/aula:R$"+
+        return ("Professor: "+super.descreve()+this.departamento+
+                " - "+this.horasAula+" aulas mensais\nValor hora/aula:R$"+
                 valorAula+"\n");
-
     }
 
    public static void setValorAula(double valorAula) {
-
         ProfessorSubstituto.valorAula = valorAula;
     }
 

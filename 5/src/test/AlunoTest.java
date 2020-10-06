@@ -3,14 +3,15 @@ package test;
 import classes.Aluno;
 import classes.Avaliação;
 import classes.Disciplina;
+import classes.SexoUsuario;
 
 import java.util.ArrayList;
 
 public class AlunoTest {
     public static void main(String[] args) {
 
-        //Criação das avaliações e inclusão na lista respectiva
-        Avaliação av1= new Avaliação("Portugues", 9);
+        //Criação das avaliações
+        Avaliação av1= new Avaliação("Portugues", 10);
         Avaliação av2= new Avaliação("Portugues", 5);
         Avaliação av3= new Avaliação("Ciencias", 8);
         Avaliação av4= new Avaliação("Matematica", 7);
@@ -22,7 +23,7 @@ public class AlunoTest {
         System.out.println("Terceira avaliação: "+av3);
         System.out.println("\n");
 
-       //Criação das disciplinas utilizando as listas de avaliações e adição a lista
+       //Criação das disciplinas
         Disciplina disciplina1= new Disciplina("Portugues");
         Disciplina disciplina2= new Disciplina("Ciencias");
         Disciplina disciplina3= new Disciplina("Matematica");
@@ -62,13 +63,13 @@ public class AlunoTest {
         System.out.println("\n");
 
         //Criação dos alunos, com mudança de ano, manual, para verificar o incremento do codigo Ano-X
-       // Aluno.setAno(2020);
-        Aluno aluno1 = new Aluno("Leo", "9991212", "leo@gmail","Masculino");
-        Aluno aluno2 = new Aluno("Pedro", "3223451", "kik@hot","Masculino");
-        Aluno aluno3 = new Aluno("Pam","3232212", "joi@gmia","Feminino");
-       // Aluno.setAno(2021);
-        Aluno aluno4 = new Aluno("Mateus","32232212", "qqr@gmia","Masculino");
-        Aluno aluno5 = new Aluno("Fabricio","999212", "algum@gmia","Masculino");
+        Aluno.setAno(2020);
+        Aluno aluno1 = new Aluno("Leo", "9991212", "leo@gmail", SexoUsuario.MASCULINO);
+        Aluno aluno2 = new Aluno("Pedro", "3223451", "kik@hot",SexoUsuario.MASCULINO);
+        Aluno aluno3 = new Aluno("Pam","3232212", "joi@gmia",SexoUsuario.FEMININO);
+        Aluno.setAno(2021);
+        Aluno aluno4 = new Aluno("Mateus","32232212", "qqr@gmia",SexoUsuario.MASCULINO);
+        Aluno aluno5 = new Aluno("Fabricio","999212", "algum@gmia",SexoUsuario.MASCULINO);
 
         //Teste do incremento do codigo Ano-X
         System.out.println(aluno1.descreve());

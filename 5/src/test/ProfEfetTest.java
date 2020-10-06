@@ -2,6 +2,7 @@ package test;
 
 import classes.ProfessorEfetivo;
 import classes.Regime;
+import classes.SexoUsuario;
 
 public class ProfEfetTest {
     public static void main(String[] args) {
@@ -10,11 +11,11 @@ public class ProfEfetTest {
         Regime regime2 = new Regime("20 aulas", 3000);
 
         //Criação de professores
-        ProfessorEfetivo prof1= new ProfessorEfetivo("Pedro","32223123","pedro@hotmail","Masculino",
+        ProfessorEfetivo prof1= new ProfessorEfetivo("Pedro","32223123","pedro@hotmail", SexoUsuario.MASCULINO,
                 "Informatica",regime1,"01/09/2000");
-        ProfessorEfetivo prof2= new ProfessorEfetivo("Marcos","99981237","markin@gmail","Masculino",
+        ProfessorEfetivo prof2= new ProfessorEfetivo("Marcos","99981237","markin@gmail",SexoUsuario.MASCULINO,
                 "Eletrica", regime2,"11/01/2000");
-        ProfessorEfetivo prof3= new ProfessorEfetivo("Marcia","99981237","markin@gmail","Feminino",
+        ProfessorEfetivo prof3= new ProfessorEfetivo("Marcia","99981237","markin@gmail",SexoUsuario.FEMININO,
                 "Eletrica", regime2,"11/01/2000");
 
         //Consulta

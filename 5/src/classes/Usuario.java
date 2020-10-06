@@ -1,16 +1,18 @@
 package classes;
 
-public class Usuario  {
+import static classes.SexoUsuario.FEMININO;
+
+public abstract class Usuario  {
     protected String nome;
     protected String telefone;
     protected String email;
-    protected String sexo;
+    protected SexoUsuario sexo;
 
-    public Usuario(String nome, String telefone, String email, String sexo) {
+    protected Usuario(String nome, String telefone, String email, SexoUsuario sexo) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-        this.sexo = sexo.toLowerCase();
+        this.sexo = sexo;
     }
 
     protected String descreve (){
@@ -18,7 +20,7 @@ public class Usuario  {
     }
 
     protected String tratamento(){
-        if (sexo.equals("feminino")){
+        if (sexo==FEMININO){
             return "a";
         }
         else{

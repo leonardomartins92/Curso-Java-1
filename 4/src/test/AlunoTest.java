@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class AlunoTest {
     public static void main(String[] args) {
 
-        //Criação das avaliações e inclusão na lista respectiva
+        //Criação das avaliações
         Avaliação av1= new Avaliação("Portugues", 9);
         Avaliação av2= new Avaliação("Portugues", 5);
         Avaliação av3= new Avaliação("Ciencias", 8);
@@ -22,7 +22,7 @@ public class AlunoTest {
         System.out.println("Terceira avaliação: "+av3);
         System.out.println("\n");
 
-       //Criação das disciplinas utilizando as listas de avaliações e adição a lista
+       //Criação das disciplinas
         Disciplina disciplina1= new Disciplina("Portugues");
         Disciplina disciplina2= new Disciplina("Ciencias");
         Disciplina disciplina3= new Disciplina("Matematica");

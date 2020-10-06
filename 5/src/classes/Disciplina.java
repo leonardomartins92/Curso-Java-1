@@ -44,14 +44,12 @@ public class Disciplina {
 
     }
 
-    public boolean adicionaAvaliação(Avaliação avaliação){
+    public void adicionaAvaliação(Avaliação avaliação){
         listaAvaliações.add(avaliação);
-        return true;
     }
 
-    public boolean removeAvaliação(Avaliação avaliação){
+    public void removeAvaliação(Avaliação avaliação){
         listaAvaliações.remove(avaliação);
-        return true;
     }
 
     public String listaAvaliações(){

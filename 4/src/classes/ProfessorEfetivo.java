@@ -1,17 +1,19 @@
 package classes;
 
 public class ProfessorEfetivo extends Usuario {
-    Regime regime;
+    private String departamento;
+    private Regime regime;
     private String dataContrataçao;
 
     public ProfessorEfetivo(String nome, String telefone, String email,String sexo,String departamento, Regime regime, String dataContrataçao) {
-        super(nome,telefone,email,sexo,departamento);
+        super(nome,telefone,email,sexo);
+        this.departamento=departamento;
         this.dataContrataçao = dataContrataçao;
         this.regime=regime;
     }
 
     public String descreve(){
-        return ("Professor: "+super.descreve()+
+        return ("Professor: "+super.descreve()+this.departamento+
                 " - "+regime.getDescrição()+
                 "\nSalário:"+regime.getSalario()+
                 "\nContratado em:"+this.dataContrataçao+"\n");
