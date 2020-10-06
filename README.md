@@ -2,4 +2,6 @@
 
 ## O trabalho foi realizado em etapas, cada pasta contém sua respectiva etapa e a descrição das demandas do trabalho
 
-<img src="/leonardomartins92/Curso-LP1/blob/master/Diagrama%20de%20Classes.png?raw=true" alt="Diagrama de Classes.png">
+<p align="center">
+  <img src=""/leonardomartins92/Curso-LP1/blob/master/Diagrama%20de%20Classes.png" width="350" title="hover text">
+</p>
