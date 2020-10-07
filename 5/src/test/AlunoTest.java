@@ -11,10 +11,10 @@ public class AlunoTest {
     public static void main(String[] args) {
 
         //Criação das avaliações
-        Avaliação av1= new Avaliação("Portugues", 10);
-        Avaliação av2= new Avaliação("Portugues", 5);
-        Avaliação av3= new Avaliação("Ciencias", 8);
-        Avaliação av4= new Avaliação("Matematica", 7);
+        Avaliação av1= new Avaliação("Portugues", 100);
+        Avaliação av2= new Avaliação("Portugues", 50);
+        Avaliação av3= new Avaliação("Ciencias", 80);
+        Avaliação av4= new Avaliação("Matematica", 70);
 
         //Impressão das avaliações para verificar to_String e o incremento do codigo "A_"
         System.out.println("\n");

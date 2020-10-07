@@ -5,10 +5,10 @@ import classes.*;
 public class RelatorioTest {
     public static void main(String[] args) {
         //Criação das avaliações
-        Avaliação av1= new Avaliação("Portugues", 10);
-        Avaliação av2= new Avaliação("Portugues", 5);
-        Avaliação av3= new Avaliação("Ciencias", 8);
-        Avaliação av4= new Avaliação("Matematica", 7);
+        Avaliação av1= new Avaliação("Portugues", 51);
+        Avaliação av2= new Avaliação("Portugues",50 );
+        Avaliação av3= new Avaliação("Ciencias", 52);
+        Avaliação av4= new Avaliação("Matematica", 53);
 
         //Criação das disciplinas
         Disciplina disciplina1= new Disciplina("Portugues");
@@ -39,6 +39,8 @@ public class RelatorioTest {
         aluno3.adicionaDisciplina(disciplina2);
         aluno3.adicionaDisciplina(disciplina3);
 
-        System.out.println(Relatorio.crescente(aluno1));
+        //Metodo gera relatório notas crescentes
+        System.out.println("Crescente:"+Relatorio.crescente(aluno1));
+        System.out.println("Decrescente:"+Relatorio.decrescente(aluno1));
     }
 }

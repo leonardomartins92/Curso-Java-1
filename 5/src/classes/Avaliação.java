@@ -2,11 +2,11 @@ package classes;
 
 public class Avaliação {
     private String descrição;
-    private double valor;
+    private int valor;
     private String identificador;
     private static int id=1;
 
-    public Avaliação(String descrição, double valor) {
+    public Avaliação(String descrição, int valor) {
         if(valor<0 || valor>100){
             throw new IllegalArgumentException("O valor da Avaliação deve ser entre 0 e 100");
         }
@@ -29,7 +29,7 @@ public class Avaliação {
                 '}';
     }
 
-    public double getValor() {
+    public int getValor() {
         return valor;
     }
 
