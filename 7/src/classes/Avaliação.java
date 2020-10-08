@@ -33,10 +33,6 @@ public class Avaliação {
         return valor;
     }
 
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-
     public String getDescrição() {
         return descrição;
     }

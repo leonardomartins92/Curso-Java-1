@@ -1,6 +1,5 @@
 package classes;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,9 +8,7 @@ public class Ranking {
         if (aluno.getHistoricoDisciplina().isEmpty()) {
             return;
         } else {
-            if(!Aluno.alunos.contains(aluno)) {
-                Aluno.alunos.add(aluno);
-            }
+            Aluno.setAlunos(aluno);
             double ira = aluno.calculaIra();
             if (ira >= 89) {
                 aluno.setRank("A");
@@ -23,19 +20,12 @@ public class Ranking {
         }
     }
 
-    public static ArrayList<Aluno> listaRanking(){
-        return Aluno.alunos;
+    public static List<Aluno> listaRanking(){
+        return Aluno.getAlunos().stream().distinct().collect(Collectors.toList());
 
     }
 
     public static String consultaRanking(Aluno aluno){
        return aluno.getRank();
-    }
-
-    public static void atualizaRanking(){
-       ArrayList<Aluno> listaAlunos=Aluno.alunos;
-       for (Aluno a:listaAlunos){
-            calculaRanking(a);
-       }
     }
 }

@@ -3,9 +3,9 @@ package test;
 import classes.*;
 
 public class RankingTest {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         //Criação das avaliações
-        Avaliação av1 = new Avaliação("Portugues", 97);
+        Avaliação av1 = new Avaliação("Portugues", 91);
         Avaliação av2 = new Avaliação("Portugues", 100);
         Avaliação av3 = new Avaliação("Ciencias", 95);
         Avaliação av4 = new Avaliação("Matematica", 80);
@@ -50,28 +50,10 @@ public class RankingTest {
         System.out.println("\n");
 
         //Metodo de consulta do ranking do aluno
-        System.out.println("O rank do Aluno 1 é:"+Ranking.consultaRanking(aluno1));
-        System.out.println("O rank do Aluno 2 é:"+Ranking.consultaRanking(aluno2));
-        System.out.println("O rank do Aluno 3 é:"+Ranking.consultaRanking(aluno3));
-        System.out.println("O rank do Aluno 4 é:"+Ranking.consultaRanking(aluno4));
-        System.out.println("\n");
-
-        //Mudando notas dos alunos para testar o metodo atualiza ranking
-        av1.setValor(20);
-        av2.setValor(30);
-        av3.setValor(85);
-        av4.setValor(70);
-        av5.setValor(100);
-
-        //Metodo atualiza ranking
-       Ranking.atualizaRanking();
-
-        //Metodo de consulta do ranking do aluno
-        System.out.println(Ranking.listaRanking());
-        System.out.println("O rank do Aluno 1 é:"+Ranking.consultaRanking(aluno1));
-        System.out.println("O rank do Aluno 2 é:"+Ranking.consultaRanking(aluno2));
-        System.out.println("O rank do Aluno 3 é:"+Ranking.consultaRanking(aluno3));
-        System.out.println("O rank do Aluno 4 é:"+Ranking.consultaRanking(aluno4));
+        System.out.println("O rank é:"+Ranking.consultaRanking(aluno1));
+        System.out.println("O rank é:"+Ranking.consultaRanking(aluno2));
+        System.out.println("O rank é:"+Ranking.consultaRanking(aluno3));
+        System.out.println("O rank é:"+Ranking.consultaRanking(aluno4));
 
     }
 }
