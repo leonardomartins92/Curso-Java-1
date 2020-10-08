@@ -111,6 +111,5 @@ public class AlunoTest {
         System.out.println(aluno1.tratamento());
         System.out.println(aluno3.tratamento());
 
-
     }
 }

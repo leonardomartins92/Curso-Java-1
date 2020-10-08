@@ -7,7 +7,7 @@ public class Aluno extends Usuario {
 
    private String matricula;
    private ArrayList<Disciplina> historicoDisciplina;
-   private double ira;
+   private int ira;
    private static int id=1;
    private static int ano;
    private static int mudouAno; //valor que salva ano da ultima matricula realizada para verificação
@@ -29,7 +29,7 @@ public class Aluno extends Usuario {
         return ("Aluno: "+super.descreve()+this.matricula );
     }
 
-    public double calculaIra(){
+    public int calculaIra(){
        ira=0;
         for (Disciplina disc:historicoDisciplina) {
             ira+=disc.mediaAvaliações();

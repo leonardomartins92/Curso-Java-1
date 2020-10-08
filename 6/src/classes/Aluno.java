@@ -5,14 +5,16 @@ import java.util.Calendar;
 
 public class Aluno extends Usuario {
 
+   private static ArrayList<Aluno> alunos=new ArrayList<>();
    private String matricula;
    private ArrayList<Disciplina> historicoDisciplina;
-   private double ira;
+   private int ira;
+   private String rank;
    private static int id=1;
    private static int ano;
-   private static int mudouAno; //valor que salva ano da ultima matricula realizada para verificação
+   private static int mudouAno;
 
-    public Aluno(String nome, String telefone, String email, SexoUsuario sexo) {
+   public Aluno(String nome, String telefone, String email, SexoUsuario sexo) {
         super(nome,telefone,email,sexo);
         // Linha abaixo foi removida apenas para testes de mudança de ano de forma manual
         // ano=Calendar.getInstance().get(Calendar.YEAR);
@@ -29,12 +31,12 @@ public class Aluno extends Usuario {
         return ("Aluno: "+super.descreve()+this.matricula );
     }
 
-    public double calculaIra(){
+    public int calculaIra(){
        ira=0;
         for (Disciplina disc:historicoDisciplina) {
             ira+=disc.mediaAvaliações();
         }
-        ira /=historicoDisciplina.size();
+        this.ira /=historicoDisciplina.size();
         return ira;
     }
 
@@ -44,15 +46,20 @@ public class Aluno extends Usuario {
         } else {
             return "A matéria " + disciplina.getDescrição() + " não existe no histórico";
         }
-
     }
 
     public void adicionaDisciplina(Disciplina disciplina){
-        getHistoricoDisciplina().add(disciplina);
+
+        historicoDisciplina.add(disciplina);
+        calculaIra();
+        Ranking.calculaRanking(this);
     }
 
     public void removeDisciplina(Disciplina disciplina){
+
         historicoDisciplina.remove(disciplina);
+        calculaIra();
+        Ranking.calculaRanking(this);
     }
 
     public String listaDisciplinas(){
@@ -63,7 +70,6 @@ public class Aluno extends Usuario {
        return "Disciplinas:"+disc;
     }
 
-    //usado apenas para teste da mudança de ano de forma manual
     public static void setAno(int ano) {
         Aluno.ano = ano;
     }
@@ -77,4 +83,32 @@ public class Aluno extends Usuario {
         return "Prezad"+tratamento+" Alun"+tratamento;
     }
 
-}
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "matricula='" + matricula + '\'' +
+                ", ira=" + ira +
+                ", rank='" + rank + '\'' +
+                ", nome='" + nome + '\'' +
+                '}';
+    }
+
+    public static ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public static void setAlunos(Aluno aluno) {
+        alunos.add(aluno);
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+
+    }

@@ -1,18 +1,9 @@
-# Sexta Etapa:
+# Quinta Etapa:
 
-1.	Criar um ranking onde cada aluno é único e estará vinculado a um IRA. Só poderá fazer parte do ranking, alunos com histórico de disciplinas.
-
-Essa estrutura deve associar cada nome de aluno a um conceito. Conceito A para alunos com IRA acima de 89. Conceito B para alunos com IRA acima de 69 e abaixo de 90. Conceito C para alunos com IRA abaixo de 70.
-
-
-Exemplo:
-
-![alt text](https://github.com//leonardomartins92/Curso-LP1/blob/master/6/exemplo.png?raw=true)
-
-2.	Disponibilize as seguintes operações a serem realizadas com o ranking de alunos:
-
-a)	Listar todos os alunos e seus respectivos conceitos.
-b)	Consultar o conceito de um aluno.
+1.	Vamos incorporar uma restrição no sistema. Elabore uma solução que permita a ocorrência (e o devido tratamento) de uma exceção para o caso de se registrar valor negativo ou superior a 100 para uma avaliação.
  
-3.	Crie um mecanismo capaz de atualizar essa estrutura sempre que desejado.
- 
+2.	Disponibilizar os seguintes relatórios:
+
+a)	A relação das avaliações de um aluno em ordem decrescente pela pontuação obtida.
+b)	A relação das avaliações de um aluno em ordem crescente pela pontuação obtida.
+c)	O histórico escolar de um aluno em alfabética por disciplina.
