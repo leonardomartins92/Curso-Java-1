@@ -40,7 +40,8 @@ public class RelatorioTest {
         aluno3.adicionaDisciplina(disciplina3);
 
         //Metodo gera relatório notas crescentes
-        System.out.println("Crescente:"+Relatorio.crescente(aluno1));
-        System.out.println("Decrescente:"+Relatorio.decrescente(aluno1));
+        System.out.println("Avaliações em Ordem Crescente:"+Relatorio.crescente(aluno1));
+        System.out.println("Avaliações em Ordem Decrescente:"+Relatorio.decrescente(aluno1));
+        System.out.println("Disciplinas em Ordem Alfabetica:"+Relatorio.alfabetico(aluno1));
     }
 }
