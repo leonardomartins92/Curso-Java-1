@@ -7,7 +7,7 @@ Essa estrutura deve associar cada nome de aluno a um conceito. Conceito A para a
 
 Exemplo:
 
-[alt text](https://github.com//leonardomartins92/Curso-LP1/blob/master/6/exemplo.png?raw=true)
+![alt text](https://github.com//leonardomartins92/Curso-LP1/blob/master/6/exemplo.png?raw=true)
 
 2.	Disponibilize as seguintes operações a serem realizadas com o ranking de alunos:
 
