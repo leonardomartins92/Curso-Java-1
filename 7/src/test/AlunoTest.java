@@ -1,9 +1,6 @@
 package test;
 
-import classes.Aluno;
-import classes.Avaliação;
-import classes.Disciplina;
-import classes.SexoUsuario;
+import classes.*;
 
 import java.util.ArrayList;
 
@@ -110,6 +107,7 @@ public class AlunoTest {
         //Teste do tratamento
         System.out.println(aluno1.tratamento());
         System.out.println(aluno3.tratamento());
+
 
     }
 }

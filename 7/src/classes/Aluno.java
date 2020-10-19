@@ -5,7 +5,7 @@ import java.util.Calendar;
 
 public class Aluno extends Usuario {
 
-   private static ArrayList<Aluno> alunos=new ArrayList<>();
+   public static ArrayList<Aluno> alunos=new ArrayList<>();
    private String matricula;
    private ArrayList<Disciplina> historicoDisciplina;
    private int ira;
@@ -49,17 +49,12 @@ public class Aluno extends Usuario {
     }
 
     public void adicionaDisciplina(Disciplina disciplina){
-
         historicoDisciplina.add(disciplina);
-        calculaIra();
-        Ranking.calculaRanking(this);
     }
 
     public void removeDisciplina(Disciplina disciplina){
-
         historicoDisciplina.remove(disciplina);
-        calculaIra();
-        Ranking.calculaRanking(this);
+
     }
 
     public String listaDisciplinas(){
@@ -98,10 +93,6 @@ public class Aluno extends Usuario {
         return alunos;
     }
 
-    public static void setAlunos(Aluno aluno) {
-        alunos.add(aluno);
-    }
-
     public String getRank() {
         return rank;
     }
@@ -111,4 +102,4 @@ public class Aluno extends Usuario {
     }
 
 
-    }
+}
