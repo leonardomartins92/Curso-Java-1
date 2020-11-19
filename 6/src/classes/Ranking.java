@@ -1,41 +1,62 @@
 package classes;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Ranking {
-    public static void calculaRanking(Aluno aluno) {
-        if (aluno.getHistoricoDisciplina().isEmpty()) {
-            return;
-        } else {
-            if(!Aluno.alunos.contains(aluno)) {
-                Aluno.alunos.add(aluno);
-            }
-            double ira = aluno.calculaIra();
-            if (ira >= 89) {
-                aluno.setRank("A");
-            } else if (ira > 69 && ira < 89) {
-                aluno.setRank("B");
-            } else {
-                aluno.setRank("C");
-            }
-        }
-    }
 
-    public static ArrayList<Aluno> listaRanking(){
-        return Aluno.alunos;
+    public static ArrayList<Aluno> rankA = new ArrayList<>();
+    public static ArrayList<Aluno> rankB = new ArrayList<>();
+    public static ArrayList<Aluno> rankC = new ArrayList<>();
+
+    public static ArrayList listaRanking(){
+        Ranking.atualizaRanking();
+        ArrayList<Aluno> listaAlunos=Aluno.alunos;
+        ArrayList ranking=new ArrayList();
+
+        for (Aluno a:listaAlunos){
+          ranking.add(a.nome +": "+ consultaRanking(a));
+        }
+        return ranking;
 
     }
 
     public static String consultaRanking(Aluno aluno){
-       return aluno.getRank();
+        Ranking.atualizaRanking();
+        if (rankA.contains(aluno)){
+            return "A";
+        }
+        else if (rankB.contains(aluno)){
+            return "B";
+        }
+        else if (rankC.contains(aluno)){
+            return "C";
+        }
+        else {
+            return "Sem Rank";
+        }
     }
 
     public static void atualizaRanking(){
        ArrayList<Aluno> listaAlunos=Aluno.alunos;
+       rankA.clear();
+       rankB.clear();
+       rankC.clear();
+
        for (Aluno a:listaAlunos){
-            calculaRanking(a);
+           if (a.getHistoricoDisciplina().isEmpty()) {
+               Aluno.alunos.remove(a);
+               return;
+           }
+           int ira = a.calculaIra();
+           if (ira >= 89) {
+              rankA.add(a);
+           }
+           else if (ira >= 69) {
+              rankB.add(a);
+           }
+           else {
+               rankC.add(a);
+           };
        }
     }
 }

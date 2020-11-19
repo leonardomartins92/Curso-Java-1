@@ -1,16 +1,16 @@
 package classes;
 
 public class Regime {
-    private String descrição;
+    private String descricao;
     private double salario;
 
-    public Regime(String descrição, double salario) {
-        this.descrição = descrição;
+    public Regime(String descricao, double salario) {
+        this.descricao = descricao;
         this.salario = salario;
     }
 
-    public String getDescrição() {
-        return descrição;
+    public String getDescricao() {
+        return descricao;
     }
 
     public double getSalario() {

@@ -5,10 +5,10 @@ import classes.*;
 public class RelatorioTest {
     public static void main(String[] args) {
         //Criação das avaliações
-        Avaliação av1= new Avaliação("Portugues", 51);
-        Avaliação av2= new Avaliação("Portugues",50 );
-        Avaliação av3= new Avaliação("Ciencias", 52);
-        Avaliação av4= new Avaliação("Matematica", 53);
+        Avaliacao av1= new Avaliacao("Portugues", 91);
+        Avaliacao av2= new Avaliacao("Portugues",60 );
+        Avaliacao av3= new Avaliacao("Ciencias", 82);
+        Avaliacao av4= new Avaliacao("Matematica", 73);
 
         //Criação das disciplinas
         Disciplina disciplina1= new Disciplina("Portugues");
@@ -16,13 +16,13 @@ public class RelatorioTest {
         Disciplina disciplina3= new Disciplina("Matematica");
 
         //Metodo adiciona avaliações na lista de disciplina
-        disciplina1.adicionaAvaliação(av1);
-        disciplina1.adicionaAvaliação(av2);
-        disciplina1.adicionaAvaliação(av3);
-        disciplina1.adicionaAvaliação(av4);
-        disciplina2.adicionaAvaliação(av4);
-        disciplina3.adicionaAvaliação(av1);
-        disciplina3.adicionaAvaliação(av2);
+        disciplina1.adicionaAvaliacao(av1);
+        disciplina1.adicionaAvaliacao(av2);
+        disciplina1.adicionaAvaliacao(av3);
+        disciplina1.adicionaAvaliacao(av4);
+        disciplina2.adicionaAvaliacao(av4);
+        disciplina3.adicionaAvaliacao(av1);
+        disciplina3.adicionaAvaliacao(av2);
 
         //Criação dos alunos
         Aluno.setAno(2020);

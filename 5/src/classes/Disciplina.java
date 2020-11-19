@@ -2,70 +2,69 @@ package classes;
 import java.util.ArrayList;
 
 public class Disciplina {
-    private String descrição;
-    private  ArrayList<Avaliação> listaAvaliações;
+    private String descricao;
+    private  ArrayList<Avaliacao> listaAvaliacoes;
     private String identificador;
-    private double media;
+
     private static int id=1;
 
-    public Disciplina(String descrição) {
-        this.descrição = descrição;
-        this.listaAvaliações = new ArrayList<>();
+    public Disciplina(String descricao) {
+        this.descricao = descricao;
+        this.listaAvaliacoes = new ArrayList<>();
         identificador="D"+id;
         id++;
-        this.media=this.mediaAvaliações();
+
     }
 
-    public double mediaAvaliações(){
-        media=0;
-        for (Avaliação avaliação:listaAvaliações) {
-          media+=avaliação.getValor();
+    public double mediaAvaliacoes(){
+       int media=0;
+        for (Avaliacao avaliacao:listaAvaliacoes) {
+          media+=avaliacao.getValor();
         }
-        media /=listaAvaliações.size();
+        media /=listaAvaliacoes.size();
         return media;
     }
 
     @Override
     public String toString() {
         return "Disciplina{" +
-                "descrição='" + descrição + '\'' +
-                ", listaAvaliações=" + listaAvaliações +
-                ", identificador='" + identificador + '\'' +
-                ", media=" + media +
-                '}';
+                "descricao='" + descricao + '\'' +
+                ", listaAvaliacoes=" + listaAvaliacoes +
+                ", identificador='" + identificador + '\''+
+                '}'+'\n';
     }
 
-    public String consultaAvaliação(Avaliação avaliação) {
-        if (listaAvaliações.contains(avaliação)) {
-            return "A avaliação " + avaliação.getDescrição() + " existe na lista";
+    public String consultaAvaliacao(Avaliacao avaliacao) {
+        if (listaAvaliacoes.contains(avaliacao)) {
+            return "A avaliacao " + avaliacao.getDescricao() + " existe na lista";
         } else {
-            return "A avaliação " + avaliação.getDescrição() + " não existe na lista";
+            return "A avaliacao " + avaliacao.getDescricao() + " não existe na lista";
         }
 
     }
 
-    public void adicionaAvaliação(Avaliação avaliação){
-        listaAvaliações.add(avaliação);
+    public void adicionaAvaliacao(Avaliacao avaliacao){
+        listaAvaliacoes.add(avaliacao);
     }
 
-    public void removeAvaliação(Avaliação avaliação){
-        listaAvaliações.remove(avaliação);
+    public void removeAvaliacao(Avaliacao avaliacao){
+        listaAvaliacoes.remove(avaliacao);
     }
 
-    public String listaAvaliações(){
+    public String listaAvaliacoes(){
         ArrayList av = new ArrayList();
-        for (Avaliação avaliação: listaAvaliações){
-            av.add(avaliação.getDescrição());
+        for (Avaliacao avaliacao: listaAvaliacoes){
+            av.add(avaliacao.getDescricao());
         }
-        return "Avaliações:"+av;
+        return "Avaliacoes:"+av;
     }
 
-    public String getDescrição() {
-        return descrição;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public ArrayList<Avaliação> getListaAvaliações() {
-        return listaAvaliações;
+    public ArrayList<Avaliacao> getListaAvaliacoes() {
+        return listaAvaliacoes;
     }
 
 }

@@ -1,21 +1,21 @@
 package classes;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
+
 
 public class Aluno extends Usuario {
 
    private String matricula;
    private ArrayList<Disciplina> historicoDisciplina;
-   private int ira;
    private static int id=1;
    private static int ano;
-   private static int mudouAno; //valor que salva ano da ultima matricula realizada para verificação
+   private static int mudouAno;
 
     public Aluno(String nome, String telefone, String email, SexoUsuario sexo) {
         super(nome,telefone,email,sexo);
-        // Linha abaixo foi removida apenas para testes de mudança de ano de forma manual
-        // ano=Calendar.getInstance().get(Calendar.YEAR);
+        LocalDate data= LocalDate.now();
+        ano= data.getYear();
         this.historicoDisciplina=new ArrayList<>();
         if (ano != mudouAno){
             id=1;
@@ -30,9 +30,9 @@ public class Aluno extends Usuario {
     }
 
     public int calculaIra(){
-       ira=0;
-        for (Disciplina disc:historicoDisciplina) {
-            ira+=disc.mediaAvaliações();
+      int ira=0;
+       for (Disciplina disc:historicoDisciplina) {
+          ira+=disc.mediaAvaliacoes();
         }
         ira /=historicoDisciplina.size();
         return ira;
@@ -40,15 +40,15 @@ public class Aluno extends Usuario {
 
     public String consultaDisciplina(Disciplina disciplina) {
         if (getHistoricoDisciplina().contains(disciplina)) {
-            return "A matéria " + disciplina.getDescrição() + " existe no histórico";
+            return "A matéria " + disciplina.getDescricao() + " existe no histórico";
         } else {
-            return "A matéria " + disciplina.getDescrição() + " não existe no histórico";
+            return "A matéria " + disciplina.getDescricao() + " não existe no histórico";
         }
 
     }
 
     public void adicionaDisciplina(Disciplina disciplina){
-        getHistoricoDisciplina().add(disciplina);
+        historicoDisciplina.add(disciplina);
     }
 
     public void removeDisciplina(Disciplina disciplina){
@@ -58,7 +58,7 @@ public class Aluno extends Usuario {
     public String listaDisciplinas(){
        ArrayList disc = new ArrayList();
        for (Disciplina d: historicoDisciplina){
-           disc.add(d.getDescrição());
+           disc.add(d.getDescricao());
        }
        return "Disciplinas:"+disc;
     }

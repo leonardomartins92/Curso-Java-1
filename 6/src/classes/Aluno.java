@@ -1,23 +1,22 @@
 package classes;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class Aluno extends Usuario {
 
    public static ArrayList<Aluno> alunos=new ArrayList<>();
    private String matricula;
    private ArrayList<Disciplina> historicoDisciplina;
-   private int ira;
-   private String rank;
    private static int id=1;
    private static int ano;
    private static int mudouAno;
 
    public Aluno(String nome, String telefone, String email, SexoUsuario sexo) {
         super(nome,telefone,email,sexo);
-        // Linha abaixo foi removida apenas para testes de mudança de ano de forma manual
-        // ano=Calendar.getInstance().get(Calendar.YEAR);
+        alunos.add(this);
+        LocalDate data= LocalDate.now();
+        ano= data.getYear();
         this.historicoDisciplina=new ArrayList<>();
         if (ano != mudouAno){
             id=1;
@@ -32,40 +31,40 @@ public class Aluno extends Usuario {
     }
 
     public int calculaIra(){
-       ira=0;
+        int ira=0;
         for (Disciplina disc:historicoDisciplina) {
-            ira+=disc.mediaAvaliações();
+            ira+=disc.mediaAvaliacoes();
         }
-        this.ira /=historicoDisciplina.size();
+        ira /=historicoDisciplina.size();
         return ira;
     }
 
+
     public String consultaDisciplina(Disciplina disciplina) {
         if (getHistoricoDisciplina().contains(disciplina)) {
-            return "A matéria " + disciplina.getDescrição() + " existe no histórico";
+            return "A matéria " + disciplina.getDescricao() + " existe no histórico";
         } else {
-            return "A matéria " + disciplina.getDescrição() + " não existe no histórico";
+            return "A matéria " + disciplina.getDescricao() + " não existe no histórico";
         }
     }
 
     public void adicionaDisciplina(Disciplina disciplina){
-
+        if(!Aluno.alunos.contains(this)){
+            Aluno.alunos.add(this);
+        }
         historicoDisciplina.add(disciplina);
-        calculaIra();
-        Ranking.calculaRanking(this);
+
     }
 
     public void removeDisciplina(Disciplina disciplina){
-
         historicoDisciplina.remove(disciplina);
-        calculaIra();
-        Ranking.calculaRanking(this);
+
     }
 
     public String listaDisciplinas(){
        ArrayList disc = new ArrayList();
        for (Disciplina d: historicoDisciplina){
-           disc.add(d.getDescrição());
+           disc.add(d.getDescricao());
        }
        return "Disciplinas:"+disc;
     }
@@ -88,8 +87,6 @@ public class Aluno extends Usuario {
     public String toString() {
         return "Aluno{" +
                 "matricula='" + matricula + '\'' +
-                ", ira=" + ira +
-                ", rank='" + rank + '\'' +
                 ", nome='" + nome + '\'' +
                 '}';
     }
@@ -98,13 +95,4 @@ public class Aluno extends Usuario {
         return alunos;
     }
 
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
-    }
-
-
-}
+ }

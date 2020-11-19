@@ -5,11 +5,11 @@ import classes.*;
 public class RankingTest {
     public static void main(String[] args) throws InterruptedException {
         //Criação das avaliações
-        Avaliação av1 = new Avaliação("Portugues", 97);
-        Avaliação av2 = new Avaliação("Portugues", 100);
-        Avaliação av3 = new Avaliação("Ciencias", 95);
-        Avaliação av4 = new Avaliação("Matematica", 80);
-        Avaliação av5 = new Avaliação("Matematica", 3);
+        Avaliacao av1 = new Avaliacao("Portugues", 97);
+        Avaliacao av2 = new Avaliacao("Portugues", 100);
+        Avaliacao av3 = new Avaliacao("Ciencias", 95);
+        Avaliacao av4 = new Avaliacao("Matematica", 90);
+        Avaliacao av5 = new Avaliacao("Matematica", 3);
 
         //Criação das disciplinas
         Disciplina disciplina1 = new Disciplina("Portugues");
@@ -18,18 +18,17 @@ public class RankingTest {
         Disciplina disciplina4 = new Disciplina("Calculo");
 
         //Metodo adiciona avaliações na lista de disciplina
-        disciplina1.adicionaAvaliação(av1);
-        disciplina1.adicionaAvaliação(av2);
-        disciplina1.adicionaAvaliação(av3);
-        disciplina1.adicionaAvaliação(av4);
-        disciplina2.adicionaAvaliação(av4);
-        disciplina3.adicionaAvaliação(av1);
-        disciplina3.adicionaAvaliação(av2);
-        disciplina4.adicionaAvaliação(av5);
+        disciplina1.adicionaAvaliacao(av1);
+        disciplina1.adicionaAvaliacao(av2);
+        disciplina1.adicionaAvaliacao(av3);
+        disciplina1.adicionaAvaliacao(av4);
+        disciplina2.adicionaAvaliacao(av4);
+        disciplina3.adicionaAvaliacao(av1);
+        disciplina3.adicionaAvaliacao(av2);
+        disciplina4.adicionaAvaliacao(av5);
 
 
         //Criação dos alunos
-        Aluno.setAno(2020);
         Aluno aluno1 = new Aluno("Leo", "9991212", "leo@gmail", SexoUsuario.MASCULINO);
         Aluno aluno2 = new Aluno("Pedro", "3223451", "kik@hot", SexoUsuario.MASCULINO);
         Aluno aluno3 = new Aluno("Pam", "3232212", "joi@gmia", SexoUsuario.FEMININO);
@@ -41,13 +40,12 @@ public class RankingTest {
         aluno1.adicionaDisciplina(disciplina3);
         aluno2.adicionaDisciplina(disciplina1);
         aluno2.adicionaDisciplina(disciplina2);
-        aluno3.adicionaDisciplina(disciplina2);
-        aluno3.adicionaDisciplina(disciplina3);
-        aluno4.adicionaDisciplina(disciplina4);
+        aluno3.adicionaDisciplina(disciplina4);
 
-        //Teste Lista de todos alunos e os rankings
-        System.out.println(Ranking.listaRanking());
-        System.out.println("\n");
+
+        //Teste Lista de todos alunos e os rankings - ALUNO 4 S/ HISTORICO
+        System.out.println("Ranking c/ Aluno 4 sem Histórico:");
+        System.out.println("Lista Ranking: "+Ranking.listaRanking());
 
         //Metodo de consulta do ranking do aluno
         System.out.println("O rank do Aluno 1 é:"+Ranking.consultaRanking(aluno1));
@@ -56,18 +54,21 @@ public class RankingTest {
         System.out.println("O rank do Aluno 4 é:"+Ranking.consultaRanking(aluno4));
         System.out.println("\n");
 
-        //Mudando notas dos alunos para testar o metodo atualiza ranking
+        //Mudando notas para testar o metodo atualiza ranking
         av1.setValor(20);
         av2.setValor(30);
         av3.setValor(85);
         av4.setValor(70);
         av5.setValor(100);
 
-        //Metodo atualiza ranking
-       Ranking.atualizaRanking();
+        System.out.println("Novas notas e Aluno 4 com Histórico:");
+        //Adicionando Historico p/ Aluno 4
+        aluno4.adicionaDisciplina(disciplina2);
+
+        //Teste Lista de todos alunos e os rankings - ALUNO 4 C/ HISTORICO
+        System.out.println("Lista dos alunos no Ranking: "+Ranking.listaRanking());
 
         //Metodo de consulta do ranking do aluno
-        System.out.println(Ranking.listaRanking());
         System.out.println("O rank do Aluno 1 é:"+Ranking.consultaRanking(aluno1));
         System.out.println("O rank do Aluno 2 é:"+Ranking.consultaRanking(aluno2));
         System.out.println("O rank do Aluno 3 é:"+Ranking.consultaRanking(aluno3));

@@ -1,11 +1,14 @@
 package classes;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class ProfessorEfetivo extends Usuario {
     private String departamento;
     private Regime regime;
-    private String dataContrataçao;
+    private LocalDate dataContrataçao;
 
-    public ProfessorEfetivo(String nome, String telefone, String email,SexoUsuario sexo,String departamento, Regime regime, String dataContrataçao) {
+    public ProfessorEfetivo(String nome, String telefone, String email,SexoUsuario sexo,String departamento, Regime regime, LocalDate dataContrataçao) {
         super(nome,telefone,email,sexo);
         this.departamento=departamento;
         this.dataContrataçao = dataContrataçao;
@@ -14,7 +17,7 @@ public class ProfessorEfetivo extends Usuario {
 
     public String descreve(){
         return ("Professor: "+super.descreve()+this.departamento+
-                " - "+regime.getDescrição()+
+                " - "+regime.getDescricao()+
                 "\nSalário:"+regime.getSalario()+
                 "\nContratado em:"+this.dataContrataçao+"\n");
     }

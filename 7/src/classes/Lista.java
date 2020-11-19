@@ -16,6 +16,7 @@ public class Lista {
             return false;
         }
     }
+    //terminar
     public static void lista(){
 
     }
