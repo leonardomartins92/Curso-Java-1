@@ -29,7 +29,7 @@ public class Ranking {
         ArrayList<Aluno> listaAlunos=Aluno.alunos;
 
         for (Aluno a:listaAlunos){
-            if (a.getHistoricoDisciplina().isEmpty()) {
+            if (a.historico.listar().isEmpty()) {
                 rank.remove(a);
                 return;
             }

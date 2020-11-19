@@ -2,22 +2,23 @@ package classes;
 
 import java.util.ArrayList;
 
-public class Lista {
-    public static void adiciona(ArrayList lista, Object objetoAdicionar ){
-        lista.add(objetoAdicionar);
+public class Lista<E> {
+    private ArrayList<E> lista = new ArrayList();
+
+    public void adiciona(E elemento ){
+        lista.add(elemento);
     }
-    public static void remove(ArrayList lista, Object objetoRemover ){
-        lista.remove(objetoRemover);
+    public void remove(E elemento ){
+        lista.remove(elemento);
     }
-    public static boolean consulta(ArrayList lista, Object objetoConsultado ){
-        if (lista.contains(objetoConsultado)) {
-            return true;
+    public String consulta(E elemento ){
+        if (lista.contains(elemento)) {
+            return "Sim";
         } else {
-            return false;
+            return "Não";
         }
     }
-    //terminar
-    public static void lista(){
-
+    public ArrayList<E> listar(){
+        return (ArrayList<E>) lista.clone();
     }
 }

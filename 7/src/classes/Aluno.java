@@ -7,8 +7,7 @@ public class Aluno extends Usuario {
 
    public static ArrayList<Aluno> alunos=new ArrayList<>();
    private String matricula;
-   private ArrayList<Disciplina> historicoDisciplina;
-   private String rank;
+   public  Lista<Disciplina> historico;
    private static int id=1;
    private static int ano;
    private static int mudouAno;
@@ -18,7 +17,8 @@ public class Aluno extends Usuario {
         alunos.add(this);
         LocalDate data= LocalDate.now();
         ano= data.getYear();
-        this.historicoDisciplina=new ArrayList<>();
+        this.historico=new Lista<>();
+
         if (ano != mudouAno){
             id=1;
         }
@@ -33,51 +33,27 @@ public class Aluno extends Usuario {
 
     public int calculaIra(){
         int ira=0;
-        for (Disciplina disc:historicoDisciplina) {
+        for (Disciplina disc:historico.listar()) {
             ira+=disc.mediaAvaliacoes();
         }
-        ira /=historicoDisciplina.size();
+        ira /=historico.listar().size();
         return ira;
-    }
-
-
-    public String consultaDisciplina(Disciplina disciplina) {
-        if (getHistoricoDisciplina().contains(disciplina)) {
-            return "A matéria " + disciplina.getDescricao() + " existe no histórico";
-        } else {
-            return "A matéria " + disciplina.getDescricao() + " não existe no histórico";
-        }
-    }
-
-    public void adicionaDisciplina(Disciplina disciplina){
-        historicoDisciplina.add(disciplina);
-
-    }
-
-    public void removeDisciplina(Disciplina disciplina){
-        historicoDisciplina.remove(disciplina);
-
-    }
-
-    public String listaDisciplinas(){
-       ArrayList disc = new ArrayList();
-       for (Disciplina d: historicoDisciplina){
-           disc.add(d.getDescricao());
-       }
-       return "Disciplinas:"+disc;
     }
 
     public static void setAno(int ano) {
         Aluno.ano = ano;
     }
 
-    public ArrayList<Disciplina> getHistoricoDisciplina() {
-        return historicoDisciplina;
-    }
-
     public String tratamento(){
         String tratamento = super.tratamento();
         return "Prezad"+tratamento+" Alun"+tratamento;
+    }
+    public String listaDisciplinas(){
+        ArrayList disc = new ArrayList();
+        for (Disciplina d: historico.listar()){
+            disc.add(d.getDescricao());
+        }
+        return "Disciplinas:"+disc;
     }
 
 
@@ -85,22 +61,8 @@ public class Aluno extends Usuario {
     public String toString() {
         return "Aluno{" +
                 "matricula='" + matricula + '\'' +
-                ", rank='" + rank + '\'' +
                 ", nome='" + nome + '\'' +
                 '}';
     }
-
-    public static ArrayList<Aluno> getAlunos() {
-        return alunos;
-    }
-
-    public String getRank() {
-        return rank;
-    }
-
-    public void setRank(String rank) {
-        this.rank = rank;
-    }
-
 
 }

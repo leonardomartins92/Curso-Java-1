@@ -98,6 +98,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../7/src/classes/Aluno.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../7/src/classes/Disciplina.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../7/src/classes/Rank.java">
           <value>
             <set />
@@ -108,12 +118,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../7/src/classes/Relatorio.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../7/src/classes/Usuario.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../7/src/test/AlunoTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../7/src/test/RankingTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../7/src/test/RelatorioTest.java">
           <value>
             <set />
           </value>

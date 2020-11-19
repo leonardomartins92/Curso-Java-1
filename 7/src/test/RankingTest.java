@@ -18,14 +18,14 @@ public class RankingTest {
         Disciplina disciplina4 = new Disciplina("Calculo");
 
         //Metodo adiciona avaliações na lista de disciplina
-        disciplina1.adicionaAvaliacao(av1);
-        disciplina1.adicionaAvaliacao(av2);
-        disciplina1.adicionaAvaliacao(av3);
-        disciplina1.adicionaAvaliacao(av4);
-        disciplina2.adicionaAvaliacao(av4);
-        disciplina3.adicionaAvaliacao(av1);
-        disciplina3.adicionaAvaliacao(av2);
-        disciplina4.adicionaAvaliacao(av5);
+        disciplina1.avaliacoes.adiciona(av1);
+        disciplina1.avaliacoes.adiciona(av2);
+        disciplina1.avaliacoes.adiciona(av3);
+        disciplina1.avaliacoes.adiciona(av4);
+        disciplina2.avaliacoes.adiciona(av4);
+        disciplina3.avaliacoes.adiciona(av1);
+        disciplina3.avaliacoes.adiciona(av2);
+        disciplina4.avaliacoes.adiciona(av5);
 
 
         //Criação dos alunos
@@ -35,13 +35,13 @@ public class RankingTest {
         Aluno aluno4 = new Aluno("Mariana", "3232212", "joi@gmia", SexoUsuario.FEMININO);
 
         //Metodo adiciona disciplina
-        aluno1.adicionaDisciplina(disciplina1);
-        aluno1.adicionaDisciplina(disciplina2);
-        aluno1.adicionaDisciplina(disciplina3);
-        aluno2.adicionaDisciplina(disciplina1);
-        aluno2.adicionaDisciplina(disciplina2);
-        aluno3.adicionaDisciplina(disciplina4);
-        aluno4.adicionaDisciplina(disciplina4);
+        aluno1.historico.adiciona(disciplina1);
+        aluno1.historico.adiciona(disciplina2);
+        aluno1.historico.adiciona(disciplina3);
+        aluno2.historico.adiciona(disciplina1);
+        aluno2.historico.adiciona(disciplina2);
+        aluno3.historico.adiciona(disciplina4);
+        aluno4.historico.adiciona(disciplina4);
 
         //Teste Lista de todos alunos e os rankings - ALUNA Mariana C/ HISTORICO
         System.out.println("Ranking c/ Aluna Mariana com Histórico:");
@@ -63,7 +63,7 @@ public class RankingTest {
         av5.setValor(100);
 
         //Removendo historico Aluno 4
-        aluno4.removeDisciplina(disciplina4);
+        aluno4.historico.remove(disciplina4);
 
         //Metodo de consulta do ranking do aluno
         System.out.println("Novas notas e Aluna Mariana sem Histórico:");

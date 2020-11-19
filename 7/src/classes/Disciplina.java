@@ -4,23 +4,23 @@ import java.util.ArrayList;
 
 public class Disciplina {
     private String descricao;
-    private  ArrayList<Avaliacao> listaAvaliacoes;
+    public Lista<Avaliacao> avaliacoes;
     private String identificador;
     private static int id=1;
 
     public Disciplina(String descricao) {
         this.descricao = descricao;
-        this.listaAvaliacoes = new ArrayList<>();
+        this.avaliacoes=new Lista<>();
         identificador="D"+id;
         id++;
     }
 
     public double mediaAvaliacoes(){
         int media=0;
-        for (Avaliacao avaliacao:listaAvaliacoes) {
+        for (Avaliacao avaliacao:avaliacoes.listar()) {
           media+=avaliacao.getValor();
         }
-        media /=listaAvaliacoes.size();
+        media /=avaliacoes.listar().size();
         return media;
      }
 
@@ -28,31 +28,12 @@ public class Disciplina {
     public String toString() {
         return "Disciplina{" +
                 "descricao='" + descricao + '\'' +
-                ", listaAvaliacoes=" + listaAvaliacoes +
                 ", identificador='" + identificador + '\'' +
                 '}';
     }
-
-    public String consultaAvaliacao(Avaliacao avaliacao) {
-        if (listaAvaliacoes.contains(avaliacao)) {
-            return "A avaliacao " + avaliacao.getDescricao() + " existe na lista";
-        } else {
-            return "A avaliacao " + avaliacao.getDescricao() + " não existe na lista";
-        }
-
-    }
-
-    public void adicionaAvaliacao(Avaliacao avaliacao){
-        listaAvaliacoes.add(avaliacao);
-    }
-
-    public void removeAvaliacao(Avaliacao avaliacao){
-        listaAvaliacoes.remove(avaliacao);
-    }
-
     public String listaAvaliacoes(){
         ArrayList av = new ArrayList();
-        for (Avaliacao avaliacao: listaAvaliacoes){
+        for (Avaliacao avaliacao: avaliacoes.listar()){
             av.add(avaliacao.getDescricao());
         }
         return "Avaliacoes:"+av;
@@ -60,10 +41,6 @@ public class Disciplina {
 
     public String getDescricao() {
         return descricao;
-    }
-
-    public ArrayList<Avaliacao> getListaAvaliacoes() {
-        return listaAvaliacoes;
     }
 
 }
