@@ -49,9 +49,6 @@ public class Aluno extends Usuario {
     }
 
     public void adicionaDisciplina(Disciplina disciplina){
-        if(!Aluno.alunos.contains(this)){
-            Aluno.alunos.add(this);
-        }
         historicoDisciplina.add(disciplina);
 
     }

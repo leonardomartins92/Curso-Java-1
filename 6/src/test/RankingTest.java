@@ -9,7 +9,7 @@ public class RankingTest {
         Avaliacao av2 = new Avaliacao("Portugues", 100);
         Avaliacao av3 = new Avaliacao("Ciencias", 95);
         Avaliacao av4 = new Avaliacao("Matematica", 90);
-        Avaliacao av5 = new Avaliacao("Matematica", 3);
+        Avaliacao av5 = new Avaliacao("Matematica", 73);
 
         //Criação das disciplinas
         Disciplina disciplina1 = new Disciplina("Portugues");
@@ -41,17 +41,18 @@ public class RankingTest {
         aluno2.adicionaDisciplina(disciplina1);
         aluno2.adicionaDisciplina(disciplina2);
         aluno3.adicionaDisciplina(disciplina4);
+        aluno4.adicionaDisciplina(disciplina4);
 
-
-        //Teste Lista de todos alunos e os rankings - ALUNO 4 S/ HISTORICO
-        System.out.println("Ranking c/ Aluno 4 sem Histórico:");
+        //Teste Lista de todos alunos e os rankings - ALUNA Mariana C/ HISTORICO
+        System.out.println("Ranking c/ Aluna Mariana com Histórico:");
         System.out.println("Lista Ranking: "+Ranking.listaRanking());
 
         //Metodo de consulta do ranking do aluno
-        System.out.println("O rank do Aluno 1 é:"+Ranking.consultaRanking(aluno1));
-        System.out.println("O rank do Aluno 2 é:"+Ranking.consultaRanking(aluno2));
-        System.out.println("O rank do Aluno 3 é:"+Ranking.consultaRanking(aluno3));
-        System.out.println("O rank do Aluno 4 é:"+Ranking.consultaRanking(aluno4));
+        System.out.println("O rank do Aluno "+ aluno1.getNome()+ " é:"+Ranking.consultaRanking(aluno1));
+        System.out.println("O rank do Aluno "+ aluno2.getNome()+ " é:"+Ranking.consultaRanking(aluno2));
+        System.out.println("O rank do Aluno "+ aluno3.getNome()+ " é:"+Ranking.consultaRanking(aluno3));
+        System.out.println("O rank do Aluno "+ aluno4.getNome()+ " é:"+Ranking.consultaRanking(aluno4));
+
         System.out.println("\n");
 
         //Mudando notas para testar o metodo atualiza ranking
@@ -61,18 +62,19 @@ public class RankingTest {
         av4.setValor(70);
         av5.setValor(100);
 
-        System.out.println("Novas notas e Aluno 4 com Histórico:");
-        //Adicionando Historico p/ Aluno 4
-        aluno4.adicionaDisciplina(disciplina2);
-
-        //Teste Lista de todos alunos e os rankings - ALUNO 4 C/ HISTORICO
-        System.out.println("Lista dos alunos no Ranking: "+Ranking.listaRanking());
+        //Removendo historico Aluno 4
+        aluno4.removeDisciplina(disciplina4);
 
         //Metodo de consulta do ranking do aluno
-        System.out.println("O rank do Aluno 1 é:"+Ranking.consultaRanking(aluno1));
-        System.out.println("O rank do Aluno 2 é:"+Ranking.consultaRanking(aluno2));
-        System.out.println("O rank do Aluno 3 é:"+Ranking.consultaRanking(aluno3));
-        System.out.println("O rank do Aluno 4 é:"+Ranking.consultaRanking(aluno4));
+        System.out.println("Novas notas e Aluna Mariana sem Histórico:");
+
+        //Teste Lista de todos alunos e os rankings - ALUNA Mariana S/ HISTORICO
+        System.out.println("Lista dos alunos no Ranking: "+Ranking.listaRanking());
+        System.out.println("O rank do Aluno "+ aluno1.getNome()+ " é:"+Ranking.consultaRanking(aluno1));
+        System.out.println("O rank do Aluno "+ aluno2.getNome()+ " é:"+Ranking.consultaRanking(aluno2));
+        System.out.println("O rank do Aluno "+ aluno3.getNome()+ " é:"+Ranking.consultaRanking(aluno3));
+        System.out.println("O rank do Aluno "+ aluno4.getNome()+ " é:"+Ranking.consultaRanking(aluno4));
+
 
     }
 }

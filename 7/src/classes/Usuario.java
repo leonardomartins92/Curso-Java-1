@@ -6,6 +6,11 @@ public abstract class Usuario  {
     protected String nome;
     protected String telefone;
     protected String email;
+
+    public String getNome() {
+        return nome;
+    }
+
     protected SexoUsuario sexo;
 
     protected Usuario(String nome, String telefone, String email, SexoUsuario sexo) {

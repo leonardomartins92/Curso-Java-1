@@ -8,6 +8,10 @@ public abstract class Usuario  {
     protected String email;
     protected SexoUsuario sexo;
 
+    public String getNome() {
+        return nome;
+    }
+
     protected Usuario(String nome, String telefone, String email, SexoUsuario sexo) {
         this.nome = nome;
         this.telefone = telefone;
