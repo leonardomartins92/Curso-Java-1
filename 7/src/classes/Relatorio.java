@@ -7,11 +7,11 @@ import java.util.Comparator;
 public class Relatorio {
 
     public static ArrayList crescente(Aluno aluno) {
-        ArrayList<Disciplina> historico = aluno.historico.listar();
+        ArrayList<Disciplina> listaDisciplinas = aluno.listaDisciplinas.listar();
         ArrayList<Avaliacao> listaAvaliacao = new ArrayList<>();
 
-        for (Disciplina d : historico) {
-            ArrayList<Avaliacao> lista = d.avaliacoes.listar();
+        for (Disciplina d : listaDisciplinas) {
+            ArrayList<Avaliacao> lista = d.listaAvaliacoes.listar();
             for (Avaliacao av : lista) {
                 listaAvaliacao.add(av);
             }
@@ -29,9 +29,9 @@ public class Relatorio {
     }
 
     public static ArrayList alfabetico(Aluno aluno){
-        ArrayList<Disciplina> historico = aluno.historico.listar();
-        Collections.sort(historico, Relatorio.comparaAlfabetico);
-        return historico;
+        ArrayList<Disciplina> listaDisciplinas = aluno.listaDisciplinas.listar();
+        Collections.sort(listaDisciplinas, Relatorio.comparaAlfabetico);
+        return listaDisciplinas;
     }
 
     public static Comparator<Avaliacao> comparaValor = (v1, v2) -> {

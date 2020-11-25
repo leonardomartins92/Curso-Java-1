@@ -15,16 +15,16 @@ public class RelatorioTest {
         Disciplina disciplina3= new Disciplina("Matematica");
 
         //Metodo adiciona avaliações na lista de disciplina
-        disciplina1.avaliacoes.adiciona(av1);
-        disciplina2.avaliacoes.adiciona(av2);
-        disciplina3.avaliacoes.adiciona(av3);
+        disciplina1.listaAvaliacoes.adiciona(av1);
+        disciplina2.listaAvaliacoes.adiciona(av2);
+        disciplina3.listaAvaliacoes.adiciona(av3);
 
         Aluno aluno1 = new Aluno("Leo", "9991212", "leo@gmail", SexoUsuario.MASCULINO);
 
         //Metodo adiciona disciplina
-        aluno1.historico.adiciona(disciplina1);
-        aluno1.historico.adiciona(disciplina2);
-        aluno1.historico.adiciona(disciplina3);
+        aluno1.listaDisciplinas.adiciona(disciplina1);
+        aluno1.listaDisciplinas.adiciona(disciplina2);
+        aluno1.listaDisciplinas.adiciona(disciplina3);
 
         //Metodo gera relatório notas crescentes
         System.out.println("Avaliações em Ordem Crescente:"+Relatorio.crescente(aluno1));

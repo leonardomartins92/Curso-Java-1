@@ -7,7 +7,7 @@ public class Aluno extends Usuario {
 
    public static ArrayList<Aluno> alunos=new ArrayList<>();
    private String matricula;
-   public  Lista<Disciplina> historico;
+   public  Lista<Disciplina> listaDisciplinas;
    private static int id=1;
    private static int ano;
    private static int mudouAno;
@@ -17,7 +17,7 @@ public class Aluno extends Usuario {
         alunos.add(this);
         LocalDate data= LocalDate.now();
         ano= data.getYear();
-        this.historico=new Lista<>();
+        this.listaDisciplinas=new Lista<>();
 
         if (ano != mudouAno){
             id=1;
@@ -33,15 +33,11 @@ public class Aluno extends Usuario {
 
     public int calculaIra(){
         int ira=0;
-        for (Disciplina disc:historico.listar()) {
+        for (Disciplina disc:listaDisciplinas.listar()) {
             ira+=disc.mediaAvaliacoes();
         }
-        ira /=historico.listar().size();
+        ira /=listaDisciplinas.listar().size();
         return ira;
-    }
-
-    public static void setAno(int ano) {
-        Aluno.ano = ano;
     }
 
     public String tratamento(){
@@ -50,13 +46,11 @@ public class Aluno extends Usuario {
     }
     public String listaDisciplinas(){
         ArrayList disc = new ArrayList();
-        for (Disciplina d: historico.listar()){
+        for (Disciplina d: listaDisciplinas.listar()){
             disc.add(d.getDescricao());
         }
         return "Disciplinas:"+disc;
     }
-
-
     @Override
     public String toString() {
         return "Aluno{" +

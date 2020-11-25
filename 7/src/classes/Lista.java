@@ -3,22 +3,22 @@ package classes;
 import java.util.ArrayList;
 
 public class Lista<E> {
-    private ArrayList<E> lista = new ArrayList();
+    private ArrayList<E> listaElemento = new ArrayList();
 
     public void adiciona(E elemento ){
-        lista.add(elemento);
+        listaElemento.add(elemento);
     }
     public void remove(E elemento ){
-        lista.remove(elemento);
+        listaElemento.remove(elemento);
     }
     public String consulta(E elemento ){
-        if (lista.contains(elemento)) {
+        if (listaElemento.contains(elemento)) {
             return "Sim";
         } else {
             return "Não";
         }
     }
     public ArrayList<E> listar(){
-        return (ArrayList<E>) lista.clone();
+        return (ArrayList<E>) listaElemento.clone();
     }
 }

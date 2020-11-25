@@ -32,14 +32,14 @@ public class AlunoTest {
 
         //Metodo adiciona avaliações na lista de disciplina
 
-        disciplina1.avaliacoes.adiciona(av1);
-        disciplina1.avaliacoes.adiciona(av2);
-        disciplina1.avaliacoes.adiciona(av3);
-        disciplina1.avaliacoes.adiciona(av4);
-        disciplina2.avaliacoes.adiciona(av4);
+        disciplina1.listaAvaliacoes.adiciona(av1);
+        disciplina1.listaAvaliacoes.adiciona(av2);
+        disciplina1.listaAvaliacoes.adiciona(av3);
+        disciplina1.listaAvaliacoes.adiciona(av4);
+        disciplina2.listaAvaliacoes.adiciona(av4);
 
 
-        System.out.println("Lista de Avaliações: "+disciplina1.avaliacoes.listar());
+        System.out.println("Lista de Avaliações: "+disciplina1.listaAvaliacoes.listar());
         System.out.println("\n");
 
         //Calcula media das avaliações da disciplina
@@ -47,11 +47,11 @@ public class AlunoTest {
         System.out.println("\n");
 
         //Metodo remove avaliação
-        disciplina1.avaliacoes.remove(av3);
+        disciplina1.listaAvaliacoes.remove(av3);
 
         //Metodo verifica se avaliação esta na lista
-        System.out.println("Avaliação 1 está no historico? "+disciplina1.avaliacoes.consulta(av1));
-        System.out.println("Avaliação 2 está no historico? "+disciplina1.avaliacoes.consulta(av3));
+        System.out.println("Avaliação 1 está no listaDisciplinas? "+disciplina1.listaAvaliacoes.consulta(av1));
+        System.out.println("Avaliação 2 está no listaDisciplinas? "+disciplina1.listaAvaliacoes.consulta(av3));
         System.out.println("\n");
 
         //Criação dos alunos
@@ -67,18 +67,18 @@ public class AlunoTest {
         System.out.println("\n");
 
         //Metodo adiciona disciplina
-        aluno1.historico.adiciona(disciplina1);
-        aluno1.historico.adiciona(disciplina2);
-        aluno1.historico.adiciona(disciplina3);
-        System.out.println("Lista das disciplinas: "+aluno1.historico.listar());
+        aluno1.listaDisciplinas.adiciona(disciplina1);
+        aluno1.listaDisciplinas.adiciona(disciplina2);
+        aluno1.listaDisciplinas.adiciona(disciplina3);
+        System.out.println("Lista das disciplinas: "+aluno1.listaDisciplinas.listar());
         System.out.println("\n");
 
         //Metodo remove disciplina
-        aluno1.historico.remove(disciplina3);
+        aluno1.listaDisciplinas.remove(disciplina3);
 
         //Verifica se disciplina esta na lista
-        System.out.println("Disciplina 1 está na lista? "+aluno1.historico.consulta(disciplina1));
-        System.out.println("Disciplina 3 está na lista? "+aluno1.historico.consulta(disciplina3));
+        System.out.println("Disciplina 1 está na lista? "+aluno1.listaDisciplinas.consulta(disciplina1));
+        System.out.println("Disciplina 3 está na lista? "+aluno1.listaDisciplinas.consulta(disciplina3));
         System.out.println("\n");
 
         //Metodo lista todas as avaliaçoes na lista de disciplinas

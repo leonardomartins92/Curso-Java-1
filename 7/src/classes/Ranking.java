@@ -13,9 +13,11 @@ public class Ranking {
         Ranking.atualizaRanking();
         ArrayList listaRanking= new ArrayList();
         Set<Aluno> listaAlunos=rank.keySet();
+
         for(Aluno a:listaAlunos ){
             listaRanking.add(a.getNome()+": "+consultaRanking(a));
         }
+
         return listaRanking;
     }
 
@@ -29,7 +31,7 @@ public class Ranking {
         ArrayList<Aluno> listaAlunos=Aluno.alunos;
 
         for (Aluno a:listaAlunos){
-            if (a.historico.listar().isEmpty()) {
+            if (a.listaDisciplinas.listar().isEmpty()) {
                 rank.remove(a);
                 return;
             }

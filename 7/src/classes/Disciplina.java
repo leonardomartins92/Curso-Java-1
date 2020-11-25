@@ -4,23 +4,23 @@ import java.util.ArrayList;
 
 public class Disciplina {
     private String descricao;
-    public Lista<Avaliacao> avaliacoes;
+    public Lista<Avaliacao> listaAvaliacoes;
     private String identificador;
     private static int id=1;
 
     public Disciplina(String descricao) {
         this.descricao = descricao;
-        this.avaliacoes=new Lista<>();
+        this.listaAvaliacoes=new Lista<>();
         identificador="D"+id;
         id++;
     }
 
     public double mediaAvaliacoes(){
         int media=0;
-        for (Avaliacao avaliacao:avaliacoes.listar()) {
+        for (Avaliacao avaliacao:listaAvaliacoes.listar()) {
           media+=avaliacao.getValor();
         }
-        media /=avaliacoes.listar().size();
+        media /=listaAvaliacoes.listar().size();
         return media;
      }
 
@@ -33,7 +33,7 @@ public class Disciplina {
     }
     public String listaAvaliacoes(){
         ArrayList av = new ArrayList();
-        for (Avaliacao avaliacao: avaliacoes.listar()){
+        for (Avaliacao avaliacao: listaAvaliacoes.listar()){
             av.add(avaliacao.getDescricao());
         }
         return "Avaliacoes:"+av;
