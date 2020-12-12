@@ -5,12 +5,12 @@ import java.time.LocalDate;
 public class ProfessorEfetivo extends Usuario {
     private String departamento;
     private Regime regime;
-    private LocalDate dataContrataçao;
+    private LocalDate dataContratacao;
 
-    public ProfessorEfetivo(String nome, String telefone, String email,SexoUsuario sexo,String departamento, Regime regime, LocalDate dataContrataçao) {
+    public ProfessorEfetivo(String nome, String telefone, String email,SexoUsuario sexo,String departamento, Regime regime, LocalDate dataContratacao) {
         super(nome,telefone,email,sexo);
         this.departamento=departamento;
-        this.dataContrataçao = dataContrataçao;
+        this.dataContratacao = dataContratacao;
         this.regime=regime;
     }
 
@@ -18,7 +18,7 @@ public class ProfessorEfetivo extends Usuario {
         return ("Professor: "+super.descreve()+this.departamento+
                 " - "+regime.getDescricao()+
                 "\nSalário:"+regime.getSalario()+
-                "\nContratado em:"+this.dataContrataçao+"\n");
+                "\nContratado em:"+this.dataContratacao+"\n");
     }
 
     public String tratamento(){
